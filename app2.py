@@ -5,9 +5,9 @@ import streamlit as st
 import pandas as pd
 
 # 设置中文字体和负号显示
-plt.rcParams['font.sans-serif'] = ['SimHei']  # 设置中文字体为黑体
-plt.rcParams['axes.unicode_minus'] = False  # 解决负号'-'显示为方块的问题
-plt.rcParams['font.size'] = 18  # 设置全局字体大小
+plt.rcParams['font.family'] = 'serif'
+plt.rcParams['font.serif'] = ['Times New Roman']
+plt.rcParams['axes.unicode_minus'] = False
 
 # 用户输入部分
 st.sidebar.header("输入参数")
