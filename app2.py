@@ -286,13 +286,18 @@ if st.sidebar.button("计算临界裂纹尺寸"):
                  fontsize=16, color='black', ha='left', va='bottom',
                  bbox=dict(facecolor='white', alpha=0.5))
 
-    plt.title("FAD")
-    plt.xlabel("Lr")
-    plt.ylabel("Kr")
+    plt.title("FAD", fontsize=20)  # 设置标题字体大小
+    plt.xlabel("Lr", fontsize=16)  # 设置 X 轴标签字体大小
+    plt.ylabel("Kr", fontsize=16)  # 设置 Y 轴标签字体大小
     plt.xlim(0, 1.5)
     plt.ylim(0, 2)
+    
+    # 设置刻度字体大小
+    plt.tick_params(axis='both', labelsize=14)
+    
     plt.legend()
     plt.grid(True)
+
 
     # 在 Streamlit 中显示图形
     st.pyplot(plt)
