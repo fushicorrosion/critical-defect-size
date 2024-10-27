@@ -282,7 +282,7 @@ if st.sidebar.button("计算临界裂纹尺寸"):
 
     if first_a_value is not None:
         first_idx = np.where(a_values == first_a_value)[0][0]
-        plt.text(Lr_values[first_idx] , Kr_values[first_idx] +0.2, f'临界裂纹深度 = {first_a_value - 0.01:.2f}mm',
+        plt.text(Lr_values[first_idx] , Kr_values[first_idx] +0.2, f'Critical defect size = {first_a_value - 0.01:.2f}mm',
                  fontsize=16, color='black', ha='left', va='bottom',
                  bbox=dict(facecolor='white', alpha=0.5))
 
