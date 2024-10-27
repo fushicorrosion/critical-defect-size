@@ -40,8 +40,10 @@ v = st.sidebar.number_input("泊松比", value=0.3)
 CTOD = st.sidebar.number_input("CTOD值 (mm)", value=CTOD)
 
 # 显示图片
-image_path = r"D:\ANKO\01-项目资料\！！21047-服役环境对环焊缝接头断裂敏感性影响研究\论文专利（3专利（2）+2论文（0））\软件2-临界裂纹尺寸\图片1.png"
-st.sidebar.image(image_path,  use_column_width=True)
+# 显示图片
+image_url = "https://raw.githubusercontent.com/fushicorrosion/critical-defect-size/main/%E5%9B%BE%E7%89%871.png"
+st.sidebar.image(image_url, use_column_width=True)
+
 
 
 B = st.sidebar.number_input("管道壁厚 (mm)", value=18.9)
