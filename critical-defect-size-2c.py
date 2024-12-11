@@ -24,9 +24,9 @@ if manual_ctod is not None:
     CTOD = manual_ctod  # 如果用户手动输入CTOD，则以其为准
 else:
     if material == "X70环焊缝":
-        CTOD = 0.36 - 0.104 * math.log(current_density)
+        CTOD = 0.3600 - 0.104 * math.log(current_density)
     elif material == "X80环焊缝":
-        CTOD = 0.18 - 0.031 * math.log(current_density)
+        CTOD = 0.1800 - 0.031 * math.log(current_density)
 
 # 显示计算的CTOD值
 st.sidebar.write(f"预测的 CTOD值 (mm): {CTOD:.4f}")
@@ -47,7 +47,7 @@ st.sidebar.image(image_url, use_container_width=True)  # 使用 use_container_wi
 B = st.sidebar.number_input("管道壁厚 (mm)", value=18.9)
 R = st.sidebar.number_input("管道半径 (mm)", value=610.0)
 
-a = st.sidebar.number_input("缺陷深度 a (mm)", value=0)
+a = st.sidebar.number_input("缺陷深度 a (mm)", value=0.00, format="%.2f")
 theta_deg = st.sidebar.number_input("角度值 (度)", value=90.0)
 
 Pm = st.sidebar.number_input("轴向应力 Pm (MPa)", value=161.0)
