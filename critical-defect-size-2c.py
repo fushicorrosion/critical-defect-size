@@ -39,9 +39,10 @@ v = st.sidebar.number_input("泊松比", value=0.3)
 CTOD = st.sidebar.number_input("CTOD值 (mm)", value=CTOD)
 
 # 显示图片
-# 显示图片
+
 image_url = "https://raw.githubusercontent.com/fushicorrosion/critical-defect-size/main/%E5%9B%BE%E7%89%871.png"
-st.sidebar.image(image_url, use_column_width=True)
+st.sidebar.image(image_url, use_container_width=True)  # 使用 use_container_width 参数
+
 
 B = st.sidebar.number_input("管道壁厚 (mm)", value=18.9)
 R = st.sidebar.number_input("管道半径 (mm)", value=610.0)
