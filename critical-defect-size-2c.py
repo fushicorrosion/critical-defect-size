@@ -295,7 +295,7 @@ if st.sidebar.button("计算临界裂纹长度"):
     # 绘制图形
     plt.figure(figsize=(10, 6))
     plt.plot(L_values, fL_values, label='FAC', color='b', linewidth=2)
-        plt.plot(Lr_values, Kr_values, label='(Lr, Kr)', color='g', linestyle='--')
+    plt.plot(Lr_values, Kr_values, label='(Lr, Kr)', color='g', linestyle='--')
     plt.plot(Lr_mid_values, Kr_mid_values, 'g--o', label='Iteration Points', markersize=5)  # 二分法中间点
     if critical_C is not None:
         plt.scatter(Lr, Kr, color='r', s=100)
